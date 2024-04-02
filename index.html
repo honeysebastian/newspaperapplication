@@ -30,8 +30,8 @@
             // console.log(respone);
             const result = await respone.json() 
             if(result.totalResults==0){
-                output.innerHTML = "";
                 alert("No data!!!")
+                output.innerHTML = "";
             }else{
                 try{
                 console.log(result);
@@ -43,8 +43,9 @@
                 <div class="card me-4" style="width: 18rem;">
                 <div class="card-body">
                   <h5 class="card-title">${dt.title}</h5>
-                  <p class="card-text">Source : ${dt.source.name}</p> 
-                  <p class="card-text">Published Date: ${dt.publishedAt}</p> 
+                  <hr>
+                  <p class="card-text fw-bold text-danger">Source : </p> <span>${dt.source.name}</span>
+                  <p class="card-text fw-bold text-danger mt-2">Published Date:</p><span>${dt.publishedAt}</span>
                 </div>
               </div>
                 `     
